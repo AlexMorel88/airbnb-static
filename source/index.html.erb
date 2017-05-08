@@ -2,7 +2,7 @@
 title: Le Wagon Middleman boilerplate
 ---
 
-      <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/peace.jpg');">
+    <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/peace.jpg');">
       <div class="banner-content">
         <h1>WELCOME HOME</h1>
         <p>Petite planète sympa à visiter pour pas cher</p>
@@ -45,53 +45,27 @@ title: Le Wagon Middleman boilerplate
       </div>
     </div>
 
-    <div class="wrapper-grey padded">
-      <div class="container">
-        <h2 class="text-center">Your next trip</h2>
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/donaldville.png');">
-              <div class="card-category">Donaldville</div>
-              <div class="card-description">
-                <h2>Donald's home</h2>
-                <p>au bord de l'eau, normal pour un canard...</p>
-              </div>
-                <% link_to "#", class: "card-link" do %>
-                  <%= image_tag "images/donald.jpg", class: "card-user avatar avatar-large" %>
-                <% end %>
-              </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/gotham.png');">
-              <div class="card-category">Gotham City</div>
-              <div class="card-description">
-                <h2>Catwoman's home</h2>
-                <p>faut aimer les lumières artificielles...</p>
-              </div>
-                <% link_to "#", class: "card-link" do %>
-                    <%= image_tag "images/catwoman.jpg", class: "card-user avatar avatar-large" %>
-                <% end %>
-              </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/atlantide.jpg');">
-              <div class="card-category">L'Atlantide</div>
-              <div class="card-description">
-                <h2>Fish's home</h2>
-                <p>Légèrement humide...</p>
-              </div>
-              <% link_to "#", class: "card-link" do %>
-                    <%= image_tag "images/poisson.jpg", class: "card-user avatar avatar-large" %>
-                <% end %>
-            </div>
-          </div>
+    <div class="container">
+  <div class="row">
+    <% data.flats.each do |owner, flat| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
+        <div class="card-category"><%= flat.city %></div>
+        <div class="card-description">
+          <h2><%= flat.name %></h2>
+          <p><%= flat.summary %></p>
         </div>
+        <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
+        <%= link_to "#", "flats/#{owner}.html", class: "card-link" %>
       </div>
     </div>
+    <% end %>
+  </div>
+</div>
 
     <div class="text-center padded" id="newsletter">
       <h2>On kiffe le spam</h2>
-      <p>N'hésitez pas !</p>
+      <p>N'hésitez pas !!!!!</p>
       <form class="form-inline">
         <input type="email" placeholder="canardnrv@gmail.com" class="form-control">
         <input type="submit" value="Viooooou" class="btn btn-primary btn-bordered btn-bordered-primary">
@@ -311,4 +285,5 @@ title: Le Wagon Middleman boilerplate
     <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 

@@ -1,0 +1,24 @@
+donald:
+  owner_name: Donald Duck
+  picture: images/donaldville.png
+  owner_picture: images/donald.jpg
+  name: Donald's home
+  summary: au bord de l'eau, normal pour un canard...
+  city: Donaldville, USA
+  wifi: true
+catwoman:
+  owner_name: Selina Kyle
+  picture: images/gotham.png
+  owner_picture: images/catwoman.jpg
+  name: Catwoman's home
+  summary: faut aimer les lumières artificielles...
+  city: Gotham, USA
+  wifi: false
+poisson:
+  owner_name: Piscus Posseidonis
+  picture: images/atlantide.jpg
+  owner_picture: images/poisson.jpg
+  name: Fish's home
+  summary: Légèrement humide...
+  city: Atlantide, Atlantic
+  wifi: false
