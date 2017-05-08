@@ -1,8 +1,14 @@
+$card_text: rgba(0,0,0,0.6);
+$card_color: white;
+$card_link_backround: black;
+
+
+
 .card {
   height: 250px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 3px $card_text;
   background-size: cover !important;
-  color: white;
+  color: $card_color;
   position: relative;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -22,22 +28,28 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
+
+    h2 {
+      font-size: 22px;
+       }
+
+    p {
+     font-size: 15px;
+      }
+
 }
-.card-description h2 {
-  font-size: 22px;
-}
-.card-description p {
-  font-size: 15px;
-}
+
 .card-link {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
   z-index:2;
-  background: black;
+  background: $card_link_backround;
   opacity: 0;
-}
-.card-link:hover{
-  opacity: 0.1;
+
+    &:hover {
+          opacity: 0.1;
+            }
+
 }

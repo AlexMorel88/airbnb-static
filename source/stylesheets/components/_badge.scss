@@ -1,9 +1,17 @@
+$grey: grey;
+$badge-red: #EE5F5B;
+$badge-green: #32B796;
+$badge-blue: #469AE0;
+$badge-black: black;
+
+
+
 .badge-container {
   position: relative;
   font-size: 25px;
   line-height: 30px;
   width: 30px;
-  color: grey;
+  color: $grey;
 }
 .badge {
   position: absolute;
@@ -21,16 +29,16 @@
   border-radius: 50%;
 }
 .badge-red {
-  background: #EE5F5B;
+  background: $badge-red;
 }
 .badge-green {
-  background: #32B796;
+  background: $badge-green;
 }
 .badge-blue {
-  background: #469AE0;
+  background: $badge-blue;
 }
 .badge-black {
-  background: black;
+  background: $badge-black;
 }
 .badge-bordered {
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);

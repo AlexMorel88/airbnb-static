@@ -1,3 +1,5 @@
+$wrapper_grey_background: #F4F4F4;
+
 body {
   margin: 0;
   font-family: Open-sans, sans-serif;
@@ -15,5 +17,5 @@ h2 {
   padding: 100px 0;
 }
 .wrapper-grey {
-  background: #F4F4F4;
+  background: $wrapper_grey_background;
 }
