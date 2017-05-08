@@ -2,9 +2,316 @@
 title: Le Wagon Middleman boilerplate
 ---
 
-<div class="welcome text-center padded">
-  <h1>Welcome to Middleman</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p>
-</div>
+      <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/peace.jpg');">
+      <div class="banner-content">
+        <h1>WELCOME HOME</h1>
+        <p>Petite planète sympa à visiter pour pas cher</p>
+        <form action="#" class="form-inline">
+          <input type="text" class="form-control input-lg" placeholder="checkin">
+          <input type="text" class="form-control input-lg" placeholder="checkout">
+          <select name="" id="" class="form-control input-lg">
+            <option value="1">1 canard</option>
+            <option value="2">2 canards</option>
+            <option value="3">3 canards</option>
+          </select>
+          <input type="submit" class="btn btn-primary btn-lg" value="Search">
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container text-center padded features">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="images/sylphe.jpg" alt="">
+          <h2>Ventum</h2>
+          <p>léger comme l'air</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="images/eau.jpg" alt="">
+          <h2>Aqua</h2>
+          <p>Impalpable comme l'eau</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="images/terre.jpg" alt="">
+          <h2>Terra</h2>
+          <p>Implaquable comme la terre</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <img src="images/feu.jpg" alt="">
+          <h2>Ignis</h2>
+          <p>Brulant comme le feu</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-grey padded">
+      <div class="container">
+        <h2 class="text-center">Your next trip</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/donaldville.png');">
+              <div class="card-category">Donaldville</div>
+              <div class="card-description">
+                <h2>Donald's home</h2>
+                <p>au bord de l'eau, normal pour un canard...</p>
+              </div>
+                <% link_to "#", class: "card-link" do %>
+                  <%= image_tag "images/donald.jpg", class: "card-user avatar avatar-large" %>
+                <% end %>
+              </div>
+
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/gotham.png');">
+              <div class="card-category">Gotham City</div>
+              <div class="card-description">
+                <h2>Catwoman's home</h2>
+                <p>faut aimer les lumières artificielles...</p>
+              </div>
+              <img class="card-user avatar avatar-large" src="images/catwoman.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/atlantide.jpg');">
+              <div class="card-category">L'Atlantide</div>
+              <div class="card-description">
+                <h2>Fish's home</h2>
+                <p>Légèrement humide...</p>
+              </div>
+              <img class="card-user avatar avatar-large" src="images/poisson.jpg">
+              <a class="card-link" href="#" ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center padded" id="newsletter">
+      <h2>On kiffe le spam</h2>
+      <p>N'hésitez pas !</p>
+      <form class="form-inline">
+        <input type="email" placeholder="canardnrv@gmail.com" class="form-control">
+        <input type="submit" value="Viooooou" class="btn btn-primary btn-bordered btn-bordered-primary">
+      </form>
+    </div>
+
+    <div id="map" style="width: 100%;height: 500px;"></div>
+
+
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+    var myLatlng = new google.maps.LatLng(35.6987847,139.7688111);
+
+    var myOptions = {
+      zoom: 16,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "poi.medical",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "hue": "#00ff55"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "hue": "#ff00f9"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#1e9ed2"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }
+]
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title:"Vous êtes"
+    });
+    </script>
+
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
